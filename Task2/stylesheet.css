@@ -1,0 +1,154 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #070410;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.frame {
+    max-width: 900px;
+    width: 100%;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #4DCCBD;
+    border-bottom: 1px solid #EEF36A;
+}
+
+.brand {
+    font-family: 'Teko', sans-serif;
+    font-size: 2em;
+    color: #231651;
+}
+
+.menu {
+    display: flex;
+    gap: 16px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+.menu a:hover {
+    color: #EEF36A;
+}
+
+.search button {
+    padding: 8px 16px;
+    background-color: #EEF36A;
+    color: #231651;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #4DCCBD;
+    color: #EEF36A;
+}
+
+.films {
+    display: grid;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.row {
+    display: grid;
+    gap: 16px;
+}
+
+.row.full {
+    grid-template-columns: 1fr;
+}
+
+.row.half {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+    background-color: #231651;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.poster img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.desc {
+    color: #EEF36A;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.action {
+    background-color: #4DCCBD;
+    color: #070410;
+    border-radius: 10px;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2em;
+}
+
+.action:hover {
+    background-color: #EEF36A;
+}
+
+.footer {
+    margin-top: 32px;
+    color: #4DCCBD;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 720px) {
+    .banner {
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+    .menu {
+        display: none; 
+    }
+
+    .films {
+        grid-template-columns: 1fr; 
+    }
+
+    .row {
+        grid-template-columns: 1fr; 
+    }
+
+    .search {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .brand {
+        font-size: 1.8em; 
+    }
+}
